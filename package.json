@@ -1,0 +1,19 @@
+{
+  "name": "interactive-card",
+  "version": "1.0.0",
+  "description": "![Design preview for the Interactive card details form coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reuby-dev/interactive-card.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reuby-dev/interactive-card/issues"
+  },
+  "homepage": "https://github.com/reuby-dev/interactive-card#readme"
+}
