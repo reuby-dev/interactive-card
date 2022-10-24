@@ -30,12 +30,12 @@
         <div class="form-lane">
           <label for="cardholder-name">Cardholder Name </label>
           <input type="text" name="name" id="cardholder-name" placeholder="e.g. Jane Appleseed"
-            data-text-replicate="card-name" required>
+            data-text-replicate="card-name" data-card-position="front" required>
         </div>
         <div class="form-lane">
           <label for="card-number-front">Card Number </label>
           <input type="text" name="card-number-front" id="card-number-front" placeholder="e.g. 1234 5678 9123 0000"
-            maxlength="16" data-text-replicate="card-number" required>
+            maxlength="16" data-text-replicate="card-number" data-card-position="front" required>
         </div>
         <div class="form-block">
           <fieldset class="form-lane small-lane">
@@ -43,15 +43,15 @@
             <div class="double-lane">
               <label for="expiration-month"></label>
               <input type="text" name="expiration-month" placeholder="MM" maxlength="2"
-                data-text-replicate="expiration-month" required>
+                data-text-replicate="expiration-month" data-card-position="front" required>
               <label for="expiration-year"></label>
               <input type="text" name="expiration-year" placeholder="YY" maxlength="2"
-                data-text-replicate="expiration-year" required>
+                data-text-replicate="expiration-year" data-card-position="front" required>
             </div>
           </fieldset>
           <div class="form-lane">
             <label for="secret-code">CVC</label>
-            <input type="text" name="secret-code" placeholder="e.g. 123" data-text-replicate="secret-code" maxlength="3"
+            <input type="text" name="secret-code" placeholder="e.g. 123" data-text-replicate="secret-code" maxlength="3" data-card-position="back"
               required>
           </div>
         </div>
