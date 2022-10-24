@@ -17,6 +17,16 @@ input {
     width: 100%;
 }
 
+fieldset {
+    padding: 0;
+    border: none;
+    margin: 0;
+}
+
+legend {
+    margin-bottom: 10px;
+}
+
 //mixin
 $breakpoints: (
     'sm': 767px,
@@ -93,6 +103,7 @@ $breakpoints: (
         height: 192px;
         width: 350px;
         transform: none;
+        z-index: 0;
     }
 }
 
@@ -140,7 +151,7 @@ $breakpoints: (
     }
 }
 
-#expiration-code {
+#secret-code {
     color: #fff;
     margin: 63px 0 0 250px;
     letter-spacing: 2px;
@@ -168,6 +179,12 @@ $breakpoints: (
 
 label {
     letter-spacing: 2px;
+}
+
+label[for="expiration-month"],
+label[for="expiration-year"]
+{
+    display:none;
 }
 
 input {
