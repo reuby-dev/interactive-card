@@ -1,1 +1,29 @@
-@import "./file";
+@charset "UTF-8";
+
+//1. configuration et utilitaires
+@import 
+    './utils/variables',
+    './utils/mixins',
+    './utils/animations';
+
+//2. Vendors
+
+//3. Base
+@import 
+    './base/base';
+
+//4. Layout-related sections
+@import 
+    './layouts/footer';
+
+//5. Components
+@import 
+    './components/bank-card',
+    './components/button',
+    './components/form-card';
+
+//6. Page-specific styles
+@import
+    './pages/home';
+
+//7. Themes

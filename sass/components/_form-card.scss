@@ -1,0 +1,25 @@
+.form-lane {
+    display: flex;
+    gap: 10px 0;
+    flex-direction: column;
+    text-transform: uppercase;
+    flex-grow: 1;
+}
+
+.double-lane {
+    display: flex;
+    gap: 0 10px;
+}
+
+.small-lane {
+    width: 40%;
+}
+
+.form-block {
+    display: flex;
+    gap: 0 20px;
+}
+
+.finish {
+    display: none;
+}

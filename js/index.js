@@ -3,7 +3,6 @@ class TextReplication {
         this.input = input
 
         //animation
-        
         this.input.addEventListener('focus', this.animate.bind(this))
 
         //replicate text
@@ -29,7 +28,6 @@ class TextReplication {
         let frontCard = document.getElementsByClassName('front-card')[0]
         let isElementBackPosition = frontCard.classList.contains('go-back')
         let backCard = document.getElementsByClassName('back-card')[0]
-        console.log(isElementBackPosition)
         if(elementFocusedPosition === 'front' && isElementBackPosition) {
             frontCard.classList.remove('go-back')
             frontCard.classList.add('go-front')

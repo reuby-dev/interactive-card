@@ -1,0 +1,49 @@
+@keyframes card-go-front {
+    0% {
+        top: 25%;
+        z-index: 0;
+    }
+
+    25%{
+        top: 20%;
+    }
+
+    80%{
+        z-index: 1;
+    }
+
+    100% {
+        z-index: 1;
+        top: 45%;
+    }
+
+}
+
+.go-front {
+    animation: card-go-front 0.7s ease-in-out forwards;
+}
+
+@keyframes card-go-back {
+    0% {
+        top: 45%;
+        z-index: 1;
+    }
+
+    25%{
+        top: 50%;
+    }
+
+    80%{
+        z-index: 0;
+    }
+
+    100% {
+        z-index: 0;
+        top: 25%;
+        
+    }
+}
+
+.go-back {
+    animation: card-go-back 0.7s ease-in-out forwards;
+}

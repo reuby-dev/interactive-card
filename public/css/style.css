@@ -1,3 +1,43 @@
+@keyframes card-go-front {
+  0% {
+    top: 25%;
+    z-index: 0;
+  }
+  25% {
+    top: 20%;
+  }
+  80% {
+    z-index: 1;
+  }
+  100% {
+    z-index: 1;
+    top: 45%;
+  }
+}
+.go-front {
+  animation: card-go-front 0.7s ease-in-out forwards;
+}
+
+@keyframes card-go-back {
+  0% {
+    top: 45%;
+    z-index: 1;
+  }
+  25% {
+    top: 50%;
+  }
+  80% {
+    z-index: 0;
+  }
+  100% {
+    z-index: 0;
+    top: 25%;
+  }
+}
+.go-back {
+  animation: card-go-back 0.7s ease-in-out forwards;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -25,72 +65,35 @@ legend {
   margin-bottom: 10px;
 }
 
-@keyframes card-go-front {
-  0% {
-    top: 25%;
-    z-index: 0;
-  }
-  25% {
-    top: 20%;
-  }
-  80% {
-    z-index: 1;
-  }
-  100% {
-    z-index: 1;
-    top: 45%;
-  }
-}
-.go-front {
-  animation: card-go-front 1s ease-in-out forwards;
+label {
+  letter-spacing: 2px;
 }
 
-@keyframes card-go-back {
-  0% {
-    top: 45%;
-    z-index: 1;
-  }
-  25% {
-    top: 50%;
-  }
-  80% {
-    z-index: 0;
-  }
-  100% {
-    z-index: 0;
-    top: 25%;
-  }
-}
-.go-back {
-  animation: card-go-back 1s ease-in-out forwards;
+label[for=expiration-month],
+label[for=expiration-year] {
+  display: none;
 }
 
-.main-card-form {
-  display: flex;
-  flex-direction: column;
-}
-@media (min-width: 767px) {
-  .main-card-form {
-    flex-direction: row;
-  }
+input {
+  border: solid 1px hsl(270deg, 3%, 87%);
+  border-radius: 5px;
+  padding: 10px;
 }
 
-.main-left {
-  position: relative;
-  background: url("../images/bg-main-mobile.png") no-repeat;
-  display: flex;
-  flex-direction: column;
-  background-size: 800px;
-  height: 300px;
+input::placeholder {
+  color: hsl(279deg, 6%, 55%);
+  font-size: bold;
 }
-@media (min-width: 767px) {
-  .main-left {
-    height: 100vh;
-    flex-direction: row;
-    width: 40%;
-    background: url("../images/bg-main-desktop.png") no-repeat;
-    background-size: 100%;
-  }
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  text-align: center;
 }
 
 .front-card {
@@ -172,45 +175,14 @@ legend {
   letter-spacing: 2px;
 }
 
-.main-right {
-  display: flex;
-  flex-direction: column;
-  margin: 100px auto auto auto;
-}
-@media (min-width: 767px) {
-  .main-right {
-    width: 60%;
-    margin: auto;
-  }
-}
-
-.form-card {
-  width: 50%;
-  margin: auto;
-  color: hsl(278deg, 68%, 11%);
-  display: flex;
-  flex-direction: column;
-  gap: 20px 0;
-}
-
-label {
-  letter-spacing: 2px;
-}
-
-label[for=expiration-month],
-label[for=expiration-year] {
-  display: none;
-}
-
-input {
-  border: solid 1px hsl(270deg, 3%, 87%);
-  border-radius: 5px;
-  padding: 10px;
-}
-
-input::placeholder {
-  color: hsl(279deg, 6%, 55%);
-  font-size: bold;
+.button {
+  background: hsl(278deg, 68%, 11%);
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  cursor: pointer;
 }
 
 .form-lane {
@@ -235,29 +207,57 @@ input::placeholder {
   gap: 0 20px;
 }
 
-.button {
-  background: hsl(278deg, 68%, 11%);
-  color: #fff;
-  border-radius: 10px;
-  border: none;
-  padding: 15px;
-  width: 100%;
-  cursor: pointer;
-}
-
 .finish {
   display: none;
 }
 
-.attribution {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%);
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.7);
-  width: 100%;
-  text-align: center;
+.main-card-form {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 767px) {
+  .main-card-form {
+    flex-direction: row;
+  }
+}
+
+.main-left {
+  position: relative;
+  background: url("../images/bg-main-mobile.png") no-repeat;
+  display: flex;
+  flex-direction: column;
+  background-size: 800px;
+  height: 300px;
+}
+@media (min-width: 767px) {
+  .main-left {
+    height: 100vh;
+    flex-direction: row;
+    width: 40%;
+    background: url("../images/bg-main-desktop.png") no-repeat;
+    background-size: 100%;
+  }
+}
+
+.main-right {
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto auto auto;
+}
+@media (min-width: 767px) {
+  .main-right {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+.form-card {
+  width: 50%;
+  margin: auto;
+  color: hsl(278deg, 68%, 11%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
 }
 
 /*# sourceMappingURL=style.css.map */
