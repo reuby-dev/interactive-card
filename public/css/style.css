@@ -85,6 +85,16 @@ input::placeholder {
   font-size: bold;
 }
 
+.big-font {
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+
+.grey-font {
+  color: hsl(279deg, 6%, 55%);
+  font-size: 15px;
+}
+
 .attribution {
   position: absolute;
   bottom: 0;
@@ -177,6 +187,7 @@ input::placeholder {
 .button {
   background: hsl(278deg, 68%, 11%);
   color: #fff;
+  text-align: center;
   border-radius: 10px;
   border: none;
   padding: 15px;
@@ -184,7 +195,8 @@ input::placeholder {
   cursor: pointer;
 }
 
-.form-card {
+#form-card,
+#finish {
   width: 50%;
   margin: auto;
   color: hsl(278deg, 68%, 11%);
@@ -215,8 +227,21 @@ input::placeholder {
   gap: 0 20px;
 }
 
-.finish {
+#finish {
   display: none;
+  text-align: center;
+}
+#finish:before {
+  content: "";
+  background: url("../images/icon-complete.svg") no-repeat;
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  background-size: 60px;
+  margin: 0 auto;
+}
+#finish #continue {
+  margin-top: 20px;
 }
 
 .main-card-page {

@@ -11,6 +11,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Interactive card details form</title>
 </head>
+
 <body>
   <main class="main-card-page">
     <div class="main-left">
@@ -26,7 +27,7 @@
       </div>
     </div>
     <div class="main-right">
-      <form action="" method="push" class="form-card">
+      <form action="" method="push" id="form-card">
         <div class="form-lane">
           <label for="cardholder-name">Cardholder Name </label>
           <input type="text" name="name" id="cardholder-name" placeholder="e.g. Jane Appleseed"
@@ -42,25 +43,26 @@
             <legend>Exp. Date (MM/YY)</legend>
             <div class="double-lane">
               <label for="expiration-month"></label>
-              <input type="text" name="expiration-month" placeholder="MM" maxlength="2"
+              <input type="text" name="expiration-month" placeholder="MM" maxlength="2" id="expiration-month-input"
                 data-text-replicate="expiration-month" data-card-position="front" required>
               <label for="expiration-year"></label>
-              <input type="text" name="expiration-year" placeholder="YY" maxlength="2"
+              <input type="text" name="expiration-year" placeholder="YY" maxlength="2" id="expiration-year-input"
                 data-text-replicate="expiration-year" data-card-position="front" required>
             </div>
           </fieldset>
           <div class="form-lane">
             <label for="secret-code">CVC</label>
-            <input type="text" name="secret-code" placeholder="e.g. 123" data-text-replicate="secret-code" maxlength="3" data-card-position="back"
-              required>
+            <input type="text" name="secret-code" placeholder="e.g. 123" id="secret-code-input"
+              data-text-replicate="secret-code" maxlength="3" data-card-position="back" required>
           </div>
         </div>
-        <input type="submit" class="button" value="Confirm">
+        <input type="submit" class="button" id="valid-form-button" value="Confirm">
       </form>
-      <div class="finish">
-        Thank you!
-        We've added your card details
-        <div class="button">
+      <div id="finish">
+        <p class="big-font">THANK YOU !</p>
+        <p class="grey-font">We've added your card details</p>
+
+        <div class="button" id="continue">
           Continue
         </div>
       </div>
