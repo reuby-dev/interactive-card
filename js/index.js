@@ -104,34 +104,34 @@ let formCard = document.getElementById('form-card')
 let finish = document.getElementById('finish')
 
 function validateForm(e) {
-    let cardNameInput = document.getElementById('cardholder-name').value
-    let cardNumberInput = document.getElementById('card-number-front').value
-    let expirationMonthInput = document.getElementById('expiration-month-input').value
-    let expirationYearInput = document.getElementById('expiration-year-input').value
-    let secretCodeInput = document.getElementById('secret-code-input').value
+    let cardNameInput = document.getElementById('cardholder-name')
+    let cardNumberInput = document.getElementById('card-number-front')
+    let expirationMonthInput = document.getElementById('expiration-month-input')
+    let expirationYearInput = document.getElementById('expiration-year-input')
+    let secretCodeInput = document.getElementById('secret-code-input')
 
-    if(onlyLettersRegex(cardNameInput) === false || cardNameInput === "") {
+    if(onlyLettersRegex(cardNameInput.value) === false || cardNameInput.value === "") {
         console.log('merci de remplir le champ nom')
         return false
     }
-    if(onlyNumbersRegex(cardNumberInput) === false || cardNumberInput === "") {
+    if(onlyNumbersRegex(cardNumberInput.value) === false || cardNumberInput.value === "") {
         console.log('merci de remplir le numéro de carte bancaire')
         return false
     }
-    if(onlyNumbersRegex(expirationMonthInput) === false || expirationMonthInput === "") {
+    if(onlyNumbersRegex(expirationMonthInput.value) === false || expirationMonthInput.value === "") {
         console.log('merci de remplir le mois dexpiration')
         return false
     }
-    if(onlyNumbersRegex(expirationYearInput) === false || expirationYearInput === "") {
+    if(onlyNumbersRegex(expirationYearInput.value) === false || expirationYearInput.value === "") {
         console.log('merci de remplir lannee dexpiration')
         return false
     }
-    if(onlyNumbersRegex(secretCodeInput) === false || secretCodeInput === "") {
+    if(onlyNumbersRegex(secretCodeInput.value) === false || secretCodeInput.value === "") {
         console.log('merci de remplir le code secret')
         return false
     }
+    //preventDefault is to avoid the refresh of the page. in this case, we just need to simulate success message
     e.preventDefault()
-    console.log('coucou')
 
     //form is valid, than display message
     formCard.style.display = "none"

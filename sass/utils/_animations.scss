@@ -1,20 +1,20 @@
 @keyframes card-go-front {
     0% {
-        top: 25%;
+        top: 0;
         z-index: 0;
     }
 
     25%{
-        top: 20%;
+        top: -20px;
     }
 
-    80%{
+    50%{
         z-index: 1;
     }
 
     100% {
         z-index: 1;
-        top: 45%;
+        top: 30%;
     }
 
 }
@@ -25,22 +25,21 @@
 
 @keyframes card-go-back {
     0% {
-        top: 45%;
+        top: 30%;
         z-index: 1;
     }
 
-    25%{
+    25% {
         top: 50%;
     }
 
-    80%{
+    50%{
         z-index: 0;
     }
 
     100% {
         z-index: 0;
-        top: 25%;
-        
+        top: 0;
     }
 }
 
